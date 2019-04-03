@@ -83,6 +83,11 @@ from metadash.apis.metadata import Blueprint as metadata # noqa
 app.register_blueprint(metadata, url_prefix="/api")
 
 
+# Register SSE
+from flask_sse import sse
+app.register_blueprint(sse, url_prefix='/stream')
+
+
 @app.route('/', defaults={"path": ""})
 @app.route('/<path>')
 def index(path):

@@ -116,8 +116,10 @@ class AppSettings(object):
             }
             settings.CELERY_BROKER_URL = settings.REDIS_URI
             settings.CELERY_RESULT_BACKEND = settings.REDIS_URI
+            settings.REDIS_URL = settings.REDIS_URI
         else:
             settings.CACHE_DEFAULT_BACKEND = "dogpile.cache.memory"
             settings.CACHE_ARGUEMENTS = {}
             settings.CELERY_BROKER_URL = ''
             settings.CELERY_RESULT_BACKEND = ''
+            settings.REDIS_URL = ''

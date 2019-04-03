@@ -31,6 +31,9 @@ module.exports = {
       '/api': {
         target: 'http://localhost:5000' // TODO: should be changable
       },
+      '/stream': {
+        target: 'http://localhost:5000' // TODO: should be changable
+      },
       '/docs': {
         target: 'http://localhost:5000' // TODO: should be changable
       }
